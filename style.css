@@ -1,0 +1,594 @@
+/* ALL */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root{
+    --yellow: #ffd000;
+    --dark: #1f1f1f;
+    --blue: linear-gradient(22.5deg,#006eff, #90c0ff, #006eff);
+    --light-blue: linear-gradient(22.5deg,#00ccff, #90e9ff, #00ccff);
+    --orange: linear-gradient(22.5deg,#ffff00, #ff5e00, #8c00ff);
+    --gray: linear-gradient(22.5deg,#303030, #606060, #303030);
+}
+
+body{
+    background: var(--dark);
+    width: 100vw;
+    height: 100vh;
+    font-size: 10px;
+    min-width: 1250px;
+    min-height: 800px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: background .3s linear;
+}
+
+/*BACKGROUND*/
+
+.background-section{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: -1;
+    min-width: 1250px;
+}
+
+.background-section img{
+    height: 5%;
+    width: 5%;
+    filter: opacity(0.35) blur(3px);
+}
+
+.background-section img:nth-child(1){
+    animation: background-animate 12s linear infinite;
+}
+
+.background-section img:nth-last-child(1){
+    animation: background-animate 12.5s linear infinite;
+}
+
+.background-section img:nth-child(2){
+    animation: background-animate 10s linear infinite;
+}
+
+.background-section img:nth-last-child(2){
+    animation: background-animate 9.5s linear infinite;
+}
+
+.background-section img:nth-child(3){
+    animation: background-animate 11s linear infinite;
+}
+
+.background-section img:nth-last-child(3){
+    animation: background-animate 10.5s linear infinite;
+}
+
+.background-section img:nth-child(4){
+    animation: background-animate 11.5s linear infinite;
+}
+
+.background-section img:nth-last-child(4){
+    animation: background-animate 9s linear infinite;
+}
+
+.background-section img:nth-child(5){
+    animation: background-animate 10.25s linear infinite;
+}
+
+.background-section img:nth-last-child(5){
+    animation: background-animate 9.75s linear infinite;
+}
+
+@keyframes background-animate {
+    0%{
+        transform: translateY(calc(0vh - 5vw));
+    }
+
+    100%{
+        transform: translateY(calc(100vh));
+    }
+}
+
+.snake-section{
+    width: 100vw;
+    height: 70vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    min-width: 1250px;
+    min-height: calc(800px - 30vh);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image{
+    width: auto;
+    height: 60vh;
+    min-width: 611px;
+    min-height: 400px;
+    z-index: -2;
+    filter: opacity(0.15);
+}
+
+/* THEME */
+
+.theme-button{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: calc(10% + 30px);
+    left: calc(100vw - 90px);
+    border-radius: 50%;
+    border: none;
+    background: var(--yellow);
+    cursor: pointer;
+    box-shadow: 0 0 0 10px #ffd000b3, 0 0 0 20px #ffd00080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    transition: box-shadow .5s linear, background .5s linear, transform .2s ease-in;
+}
+
+.theme-button:hover{
+    transform: scale(1.1);
+}
+
+.theme-button img{
+    width: 32px;
+    height: 32px;
+}
+
+/* LIGHT */
+
+body.light{
+    background: var(--yellow);
+}
+
+body.light .theme-button{
+    box-shadow: 0 0 0 10px #1f1f1fb3, 0 0 0 20px #1f1f1f80;
+    background: var(--dark);
+}
+
+body.light header h1 div span{
+    color: var(--dark);
+}
+
+body.light header h1{
+    border-block: 2px solid var(--dark);
+}
+
+body.light .span__list, body.light .span__changer{
+    border-inline: 2px solid var(--dark);
+    color: var(--dark);
+}
+
+body.light .span__list:hover, body.light .span__changer:hover{
+    border-inline: 2px solid var(--yellow);
+    color: var(--yellow);
+    background: var(--dark);
+}
+
+body.light .span__list ul{
+    background: var(--dark);
+}
+
+body.light .span__list li:hover{
+    background: var(--dark);
+    border-inline: 2px solid var(--yellow);
+}
+
+body.light .span__list li:hover{
+    background: var(--yellow);
+    border-inline: 2px solid var(--dark);
+}
+
+body.light .span__list li:nth-last-child(1):hover{
+    border-bottom: 2px solid var(--dark);
+}
+
+body.light .span__list li:hover a{
+    color: var(--dark);
+}
+
+body.light .span__list li a{
+    color: var(--yellow);
+}
+
+body.light footer div{
+    background: var(--yellow);
+    border-top: 2px solid var(--dark);
+}
+
+body.light .content-container h1{
+    color: var(--dark);
+}
+
+body.light .compasses-div button{
+    background: var(--dark);
+}
+
+body.light .clicker-button-span{
+    color: var(--dark);
+}
+
+body.light .point-div span{
+    color: var(--dark);
+}
+
+body.light header.game li:hover span{
+    color: var(--dark);
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header h1{
+    height: 80%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-block: 2px solid var(--yellow);
+    transition: all .3s linear;
+}
+
+header h1 div span{
+    font-size: 3rem;
+    height: 62px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: var(--yellow);
+    transition: all .3s linear;
+}
+
+.span__list, .span__changer{
+    font-size: 2rem;
+    height: 42px;
+    border-inline: 2px solid var(--yellow);
+    border-block: none;
+    color: var(--yellow);
+    padding-inline: 20px;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.span__list:hover, .span__changer:hover{
+    border-inline: 2px solid var(--dark);
+    color: #1f1f1f;
+    background: #ffd000;
+    padding-block: 10px;
+    height: 62px;
+}
+
+.span__list:hover ul{
+    display: block;
+    background: var(--yellow);
+}
+
+.span__list ul{
+    position: absolute;
+    list-style-type: none;
+    left: 0px;
+    top: 62px;
+    width: 100%;
+    background: var(--dark);
+    transition: all .3s linear;
+    display: none;
+}
+
+.span__list li{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    transition: background .5s ease-in-out;
+}
+
+.span__list li:hover{
+    background: var(--dark);
+    border-inline: 2px solid var(--yellow);
+}
+
+.span__list li:nth-last-child(1):hover{
+    border-bottom: 2px solid var(--yellow);
+    padding-bottom: 2px;
+}
+
+.span__list li:hover a{
+    color: var(--yellow);
+}
+
+.span__list li a{
+    text-decoration: none;
+    color: #1f1f1f;
+    width: 100%;
+    height: 100%;
+    padding-block: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* HEADER GAME */
+
+header.game li{
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.game li:hover span{
+    color: var(--yellow);
+}
+
+header.game li span{
+    height: 21px;
+}
+
+/*MAIN NOT GAME*/
+
+main.main{
+    height: 70%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+main.main.none{
+    display: none;
+}
+
+.menu-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-container .span__changer{
+    margin-inline: 10px;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container h1{
+    color: var(--yellow);
+    font-size: 2rem;
+    margin-top: 2vh;
+    display: block;
+    text-align: center;
+    transition: all .3s linear;
+}
+
+.content-container img{
+    height: 75%;
+    width: fit-content;
+    align-self: center;
+    margin-top: 2vh;
+}
+
+.compasses-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 38px - 2vh);
+}
+
+.compasses-div button{
+    border: none;
+    background: var(--yellow);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 20px;
+    transition: all .3s linear;
+}
+
+.compasses-div button img{
+    width: 36px;
+    height: fit-content;
+    margin: 0;
+    cursor: pointer;
+}
+
+.left-button-compass{
+    transform: rotateZ(-90deg);
+}
+
+.right-button-compass{
+    transform: rotateZ(90deg);
+}
+
+/*MAIN GAME*/
+
+main.game{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+main.game.none{
+    display: none;
+}
+
+main.game .span__list{
+    z-index: 5;
+}
+
+.clicker-button{
+    width: 5vw;
+    height: 5vw;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+    border: none;
+    background: var(--yellow);
+    cursor: pointer;
+    position: relative;
+}
+
+.clicker-button-span{
+    font-size: 1rem;
+    position: absolute;
+    color: var(--yellow);
+    bottom: -50px;
+    left: 0;
+    transition: all .3s linear;
+}
+
+.weapon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapon-div img{
+    width: auto;
+    height: 10vh;
+}
+
+.weapon-right{
+    transform: rotateX(180deg) rotateZ(180deg);
+}
+
+.active-weapon{
+    transform: rotateZ(-7.5deg);
+}
+
+.weapon-right.active-weapon{
+    transform: rotateX(180deg) rotateZ(172.5deg);
+}
+
+/* FOOTER */
+
+footer.main{
+    height: 10%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+    box-shadow: 0 0 20px black;
+}
+
+footer.main.none{
+    display: none;
+}
+
+footer div{
+    background: var(--dark);
+    border-top: 2px solid var(--yellow);
+    transition: all .3s linear;
+}
+
+footer.main div a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer.main img{
+    height: 70%;
+    width: auto;
+}
+
+footer.main div:nth-child(1) a:hover{
+    background: var(--blue);
+    background-size: 200%;
+    animation: footer-animate 5s ease-in-out infinite;
+}
+
+footer.main div:nth-child(2) a:hover{
+    background: var(--light-blue);
+    background-size: 200%;
+    animation: footer-animate 5s ease-in-out infinite;
+}
+
+footer.main div:nth-child(3) a:hover{
+    background: var(--orange);
+    background-size: 200%;
+    animation: footer-animate 5s ease-in-out infinite;
+}
+
+footer.main div:nth-child(4) a:hover{
+    background: var(--gray);
+    background-size: 200%;
+    animation: footer-animate 5s ease-in-out infinite;
+}
+
+@keyframes footer-animate{
+    0%{
+        background-position: left bottom;
+    }
+
+    50%{
+        background-position: right top;
+    }
+
+    100%{
+        background-position: left bottom;
+    }
+}
+
+/* FOOTER GAME */
+
+footer.game{
+    height: 10%;
+    width: 100%;
+    box-shadow: 0 0 20px black;
+}
+
+.point-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.point-div span{
+    font-size: 3rem;
+    color: var(--yellow);
+    height: 61px;
+    transition: all .3s linear;
+}
+
+/* CHANGE PAGE */
+
+.none{
+    display: none;
+}
+
+

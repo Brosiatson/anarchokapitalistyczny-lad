@@ -1,0 +1,25 @@
+body
+{
+	background-color: #6a8edc;
+	font-family: Arial;
+}
+
+table
+{
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: separated;
+	border: 1mm solid #1d3b7c;
+	
+	
+}
+
+td
+{
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: separated;
+	border: 1mm solid #1d3b7c;
+	
+	
+}

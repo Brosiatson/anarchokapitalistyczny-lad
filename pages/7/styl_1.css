@@ -1,0 +1,26 @@
+body {
+	
+	font-family: Verdana;
+}
+
+div[id="1"]{
+	
+	background-color: #4682B4;
+	font-size: 120%;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+div[id="2"]{
+	
+	background-color: #40E0D0;
+	height: 500px;
+}
+
+td[id="3"]{
+	
+	float: right;
+}
+	
+	

@@ -1,0 +1,141 @@
+﻿body{
+
+    color: chartreuse;
+    background-color: black;
+    background-image: url(img1.jpg);
+    background-attachment: fixed;
+
+}
+
+div[id=tytul]{
+
+    margin-top: 300px;
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana;
+
+}
+
+div[id=kreska]{
+
+    margin-top: 20px;
+    border-bottom: 5px solid chartreuse;
+    width: 50%;
+    text-align: center;
+    position: relative; left: 25%;
+
+}
+
+div[id=zwyklytekst]{
+
+    margin-top: 20px;
+    position: relative; left: 25%;
+    width: 50%;
+    font-size: 15px;
+    font-family: Verdana;
+
+}
+
+div[id=odnosniki]{
+    
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Verdana;
+    text-align: center;
+
+}
+
+div[id=podtytul]{
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative; left: 25%;
+    width: 50%;
+    font-size: 25px;
+    font-family: Verdana;
+
+}
+
+div[id=obraz]{
+
+    margin-top: 50px;
+}
+
+table{
+
+    caption-side: top;
+    border-collapse: collapse;
+    color: chartreuse;
+    table-layout: auto;
+    width: 50%;
+    position: relative; left: 25%;
+    font-family: Verdana;
+    font-size: 15px;
+    margin-top: 50px;
+
+}
+
+tr{
+
+    border: 3px solid chartreuse;
+
+}
+
+td{
+
+    border: 3px solid chartreuse;
+
+}
+
+caption{
+
+    margin-bottom: 10px;
+
+}
+
+img.center{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+img.sml{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:275px;
+
+}
+
+table.tlo{
+
+    background-color: rgb(48, 48, 48);
+}
+
+div.odstep{
+
+    margin-top: 50px;
+}
+
+td.fnt{
+
+    font-size: 10px;
+    text-align: center;
+}
+
+table.wdt{
+
+    width:auto;
+    position: relative; left: auto;
+
+}
+
+table.wdh{
+
+    width:50%;
+    position: relative; left: auto;
+
+}
