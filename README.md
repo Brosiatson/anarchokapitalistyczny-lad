@@ -1,1 +1,0 @@
-# anarchokapitalistyczny-lad
