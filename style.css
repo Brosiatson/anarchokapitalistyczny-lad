@@ -447,15 +447,14 @@ main.game .span__list{
 }
 
 .clicker-button{
-    width: 5vw;
-    height: 5vw;
+    width: 100%;
+    height: auto;
     align-self: center;
     justify-self: center;
-    border-radius: 50%;
     border: none;
-    background: var(--yellow);
     cursor: pointer;
     position: relative;
+    background: transparent;
 }
 
 .clicker-button-span{
@@ -465,6 +464,11 @@ main.game .span__list{
     bottom: -50px;
     left: 0;
     transition: all .3s linear;
+}
+
+.clicker-button-img{
+    width: 100%;
+    height: auto;
 }
 
 .weapon-div{

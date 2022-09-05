@@ -40,7 +40,7 @@ const SRC_OF_COMPASS_IMAGES = ["mypolitics", "soulgraphy"]
 const NAME_OF_COMPASSES = ["MYPOLITICS", "SOULGRAPHY"]
 
 const WEAPON_LIST = document.querySelectorAll("header.game .span__list li")
-const WEAPON_IMG = document.querySelectorAll("main.game img")
+const WEAPON_IMG = document.querySelectorAll("main.game .weapon-div img")
 const WEAPON_NAMES = ["glock", "p90", "ak47", "awp", "rpg7"]
 const WEAPON_ACCESS = [1, 0, 0, 0, 0]
 const WEAPON_COST = [100, 300, 700, 1500]
